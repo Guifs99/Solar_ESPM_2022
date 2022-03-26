@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotacao : MonoBehaviour
+public class PosCopia : MonoBehaviour
 {
 
-    public float rot;
+    public GameObject alvo;
     // Start is called before the first frame update
     void Start()
     {
-        print("ol� mundo");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, rot, 0);
+        transform.position=alvo.transform.position;
     }
 }

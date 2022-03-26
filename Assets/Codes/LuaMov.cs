@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotacao : MonoBehaviour
+public class LuaMov : MonoBehaviour
 {
 
-    public float rot;
+    public GameObject Terra;
+    public float trans;
     // Start is called before the first frame update
     void Start()
     {
-        print("ol� mundo");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, rot, 0);
+         transform.RotateAround(Terra.transform.position, Vector3.up, trans);
     }
 }
